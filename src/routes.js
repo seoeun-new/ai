@@ -33,6 +33,11 @@ import NoticeWrite2 from "./pages/notice/notice.write2";
 import NoticePreview from "./pages/notice/notice.preview";
 import NoticeDetail from "./pages/notice/notice.detail";
 
+import ReportList from "./pages/report/report.list";
+import ReportWrite from "./pages/report/report.write";
+import ReportPreview from "./pages/report/report.preview";
+import ReportDetail from "./pages/report/report.detail";
+
 import AlbumList from "./pages/album/album.list";
 import AlbumWrite from "./pages/album/album.write";
 import AlbumPreview from "./pages/album/album.preview";
@@ -106,6 +111,11 @@ export default function Router() {
         { path: '/publish/notice/write2', element: <NoticeWrite2 /> },
         { path: '/publish/notice/preview', element: <NoticePreview /> },
         { path: '/publish/notice/detail', element: <NoticeDetail /> },
+
+        { path: '/publish/report/list', element: <ReportList /> },
+        { path: '/publish/report/write', element: <ReportWrite /> },
+        { path: '/publish/report/preview', element: <ReportPreview /> },
+        { path: '/publish/report/detail', element: <ReportDetail /> },
 
         { path: '/publish/album/list', element: <AlbumList /> },
         { path: '/publish/album/write', element: <AlbumWrite /> },

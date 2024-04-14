@@ -9,7 +9,7 @@ const _ = () => {
 	useEffect(() => {
 		setHeader({
 			type: 'sub',
-			title:'비밀번호 설정', 
+			title:'', 
 			back: true
 		})
 	}, [])
@@ -25,25 +25,23 @@ const _ = () => {
 				<div className='certify-wrap'>
 					<div className='join-form'>
 						<div className='txt-guide'>
-							사용하고자 하는 비밀번호를
+							사용하고자 하는 <b>비밀번호</b>를
 							<br />
 							입력해주세요.
 						</div>
 						<div className='form-wrap col'>
 							<Input type='password' value={pw} placeholder='8글자 이상의 영문,숫자,기호 사용 가능' del={true} onChange={pwChange} />
 							<Input type='password' className='error' value={pw} placeholder='8글자 이상의 영문,숫자,기호 사용 가능' del={true} onChange={pwChange} />
+							<div className='txt-inp-error'>영문, 숫자, 기호 사용하여 8글자 이상</div>
 						</div>
-						<div className='txt-error'>영문, 숫자, 기호 사용하여 8글자 이상</div>
 
 						<div className='txt-guide'>
-							비밀번호를
+							<b>비밀번호</b>를
 							<br />
 							다시 한 번 입력해주세요.
 						</div>
 						<div className='form-wrap col'>
-							<Input type='password' placeholder='비밀번호 재입력' del={true}>
-								<span className='time'>03:00</span>
-							</Input>
+							<Input type='password' placeholder='비밀번호 재입력' del={true} />
 						</div>
 					</div>
 				</div>

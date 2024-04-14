@@ -1,4 +1,4 @@
-import { Button, Input, Textarea, Radio, RadioGroup, Tabs, TabList, TabPanel, UploadPhotos, UploadFiles } from '@/entities'
+import { Button, Input, Textarea, Radio, RadioGroup, Tabs, TabList, TabPanel, UploadPhotos, UploadFiles, Checkbox } from '@/entities'
 import { globalStore } from '@/shared'
 import { useEffect, useState } from 'react'
 import PopBoard from '@/features/popup/board/popup.board'
@@ -67,6 +67,9 @@ const _ = () => {
   const popOpenImport = () => { setPopImport(true) }
   const popCloseImport = () => { setPopImport(false) }
 
+	// 선택 동의 항목
+	const [fixNoti, setFixNoti] = useState(false)
+
 	return (
 		<>
 			<Contents>
@@ -83,8 +86,9 @@ const _ = () => {
             <TabPanel>
               <div className='tab-content'>
                 <div className='menu'>
+                  <Checkbox checked={fixNoti} onChange={setFixNoti}>고정공지</Checkbox>
                   <div className='right'>
-                    <button className='btn' onClick={popOpenImport}>불러오기</button>
+                    <Button className='btn-import' onClick={popOpenImport}>불러오기</Button>
                   </div>
                 </div>
                 <div className='form-wrap'>
@@ -110,8 +114,8 @@ const _ = () => {
                     </RadioGroup> 
                   </ul>
                 </div>
-                <div className='btn-wrap btn-step-wrap'>
-                  <div className='right'><Button className='btn-next'>다음</Button></div>
+                <div className='btn-wrap'>
+                  <Button className='btn-type1 st1'>다음</Button>
                 </div>
               </div>
             </TabPanel>

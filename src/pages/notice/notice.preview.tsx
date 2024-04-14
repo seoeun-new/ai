@@ -12,7 +12,8 @@ const _ = () => {
 		setHeader({
 			type: 'sub',
 			title:'미리보기',
-			back: true
+			back: true,
+      trash:true
 		})
 	}, [])
 
@@ -43,7 +44,8 @@ const _ = () => {
   const dateData = {
     days: ['03-01(월)', '03-02(화)', '03-03(수)', '03-04(목)', '03-05(금)', '03-06(토)', '03-07(일)', '03-08(월)', '03-09(화)', '03-10(수)', '03-11(목)', '03-12(금)', '03-13(토)', '03-14(일)'],
   }
-  const [dateValue, setDateValue] = useState(['03-04(목)', 'PM', 9, 50])
+  // const [dateValue, setDateValue] = useState(['03-04(목)', 'PM', 9, 50])
+  const [dateValue, setDateValue] = useState([])
   
 	return (
 		<>
@@ -51,7 +53,6 @@ const _ = () => {
       <div className='notice-detail-wrap'>
         <div className='view-detail'>
             <div className='view-desc'>
-              <Button className='btn-dot-menu'></Button>
               <b className='tit'>풀잎반 학부모님들께 안내드립니다.</b>
               <div className='info'>
                 <div className='left'>
@@ -100,16 +101,19 @@ const _ = () => {
                       {notiTimeOption.map((item, idx) => (
                           <li key={`radio`+idx}>
                             <Radio key={item.value} value={item.value}>{item.label}</Radio>
-                            {item.value === 'custom' && notiTime === 'custom' ? 
+                            {item.value === 'custom' ? 
                               <button className='btn-time' onClick={popOpenPicker}>
+                                { dateValue.length > 0 ? <>
                                 <span className='date'>{dateValue[0]}</span>
                                 <span className='ampm'>{dateValue[1]}</span>
                                 <span className='time'>{zeroFill(dateValue[2], 2)} : {zeroFill(dateValue[3], 2)}</span>
+                                </>
+                                : '시간을 선택해 주세요'}
                               </button>
-                            : null}
+                            : <div className='btn-time'>00:00</div>}
                           </li>
                         ))}     
-                    </RadioGroup> 
+                    </RadioGroup>
                   </ul>
                 </div>
  

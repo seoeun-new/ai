@@ -1,18 +1,24 @@
 import styled from 'styled-components'
-import { MX, COLOR, DataTable, DashboardBox, ListBox, TeacherList } from '@/shared'
+import { MX, COLOR, DateText, DataTableList, DashboardBox, ListBox } from '@/shared'
 
 export const Contents = styled.div`
 
-${DataTable}
+${DateText}
+${DataTableList}
 ${DashboardBox}
 ${ListBox}
-${TeacherList}
 
 background:#F5F6FA;
+
 .danger-list-wrap{
   .calendar-wrap{width:calc(100% + 3.2rem);margin-left:-1.6rem;}
+  .date-danger-list{margin-top:2.4rem; 
+    .date-text{margin-bottom:1.6rem; }
+  }
 }
-.teacher-list {margin-top:2.6rem;}
+.teacher-list {margin-top:2.4rem;
+  .tit{ color:#111;font-weight:500;font-size:1.6rem;display:block;margin-bottom:1.6rem; }
+}
 .banner-profile{margin-top:2.4rem;}
 .dashboard-box{margin-top:1.6rem;
   + .data-type1{margin-top:2.8rem;}

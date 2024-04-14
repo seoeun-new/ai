@@ -1,6 +1,6 @@
 import { Button, Input, Thumbnail } from '@/entities'
 import { globalStore } from '@/shared'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import Contents from './property.style'
 
 const _ = () => {
@@ -51,8 +51,8 @@ const _ = () => {
               <div className='iput-txt-error'>한글, 영문 2-10글자 이내로 등록가능합니다.</div>
             </div>
           </div>
-          <div className='btn-wrap btn-step-wrap'>
-            <div className='right'><Button as='a' to='/' className='btn-next'>다음</Button></div>
+          <div className='btn-wrap'>
+            <Button to='/' className='btn-type1 st1'>다음</Button>
           </div>
           
         </div>

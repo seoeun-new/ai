@@ -19,12 +19,12 @@ const _ = () => {
   
 	//아동 팝업
 	const childList = [
-		{clsName:'풀잎반', name:'홍길동', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'새싹반', name:'하유리', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'장미반', name:'이지은', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'풀잎반', name:'홍길동', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'새싹반', name:'하유리', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'장미반', name:'이지은', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'}
+		{clsName:'풀잎반', name:'홍길동', src:'/images/temp/temp-album.jpg'},
+		{clsName:'새싹반', name:'하유리', src:'/images/temp/temp-album.jpg'},
+		{clsName:'장미반', name:'이지은', src:'/images/temp/temp-album.jpg'},
+		{clsName:'풀잎반', name:'홍길동', src:'/images/temp/temp-album.jpg'},
+		{clsName:'새싹반', name:'하유리', src:'/images/temp/temp-album.jpg'},
+		{clsName:'장미반', name:'이지은', src:'/images/temp/temp-album.jpg'}
 	]
 	const [popChild, setPopChild] = useState(false)
   const popOpenChild = () => { setPopChild(true) }

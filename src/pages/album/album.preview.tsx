@@ -13,7 +13,8 @@ const _ = () => {
 		setHeader({
 			type: 'sub',
 			title:'앨범 미리보기',
-			back: true
+			back: true,
+      trash:true
 		})
 	}, [])
 
@@ -59,7 +60,6 @@ const _ = () => {
         <div className='view-detail'>
             <Button className='btn-select' onClick={popOpenClass}><span>{selecedClass.name}</span><em>({selecedClass.total})</em></Button>
             <div className='view-desc'>
-              <Button className='btn-dot-menu'></Button>
               <b className='tit'>풀잎반 아이들 이번주 활동사진 입니다^^ <br />즐거운 한 주를 보냈습니다~</b>
               <div className='info'>
                 <div className='left'>
@@ -91,11 +91,11 @@ const _ = () => {
                   <b className='tit'>등록시간 설정</b>
                   {dateValue}
                   <ul>
-                    <RadioGroup label='notiTime' value={notiTime} onChange={setNotiTime}>
+                  <RadioGroup label='notiTime' value={notiTime} onChange={setNotiTime}>
                       {notiTimeOption.map((item, idx) => (
                           <li key={`radio`+idx}>
                             <Radio key={item.value} value={item.value}>{item.label}</Radio>
-                            {item.value === 'custom' && notiTime === 'custom' ? 
+                            {item.value === 'custom' ? 
                               <button className='btn-time' onClick={popOpenPicker}>
                                 { dateValue.length > 0 ? <>
                                 <span className='date'>{dateValue[0]}</span>
@@ -104,7 +104,7 @@ const _ = () => {
                                 </>
                                 : '시간을 선택해 주세요'}
                               </button>
-                            : null}
+                            : <div className='btn-time'>00:00</div>}
                           </li>
                         ))}     
                     </RadioGroup> 

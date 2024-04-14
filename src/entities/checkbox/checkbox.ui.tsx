@@ -1,7 +1,6 @@
 import { Checkbox } from './checkbox.style'
 
 const _ = ({ children, className, disabled, checked, onChange }: any) => {
-	console.log(className)
 	return (
 		<Checkbox className={className === 'inp-range' ? 'inp-range' :`inp-check `+ className}>
 			<input
@@ -13,7 +12,7 @@ const _ = ({ children, className, disabled, checked, onChange }: any) => {
 				}}
 			/>
 			<i className='ic'></i>
-			<em className='t'>{children}</em>
+			{children ? <em className='t'>{children}</em> : null}
 		</Checkbox>
 	)
 }

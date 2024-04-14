@@ -32,7 +32,7 @@ const _ = () => {
 	const markHandler = (data:any) =>{ setMark(data) }
 
 	useEffect(()=>{
-		markHandler(['2024-03-17', '2024-03-20', '2024-03-25', '2024-04-02', '2024-05-02','2024-06-02','2024-07-02','2024-08-02']);
+		markHandler(['2024-03-17', '2024-03-20', '2024-03-25', '2024-04-02', '2024-04-12', '2024-05-02','2024-06-02','2024-07-02','2024-08-02']);
 	});
 
   
@@ -74,44 +74,44 @@ const _ = () => {
             </li>
           </ul>
         </div>
-        <div className='data-type1'>
-          <table>
-              <colgroup>
-                  <col style={{width:'25%'}} />
-                  <col style={{width:'25%'}} />
-                  <col style={{width:'25%'}} />
-                  <col style={{width:'25%'}} />
-              </colgroup>
-              <thead>
-                  <tr>
-                      <th>번호</th>
-                      <th>발생시각</th>
-                      <th>해결시각</th>
-                      <th>리포트</th>
-                  </tr>
-              </thead>
-              <tbody>
-                    <tr>
-                      <td>01</td>
-                      <td>08:23</td>
-                      <td>08:25</td>
-                      <td>등록</td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>08:23</td>
-                      <td><span className='c-red'>미결</span></td>
-                      <td>등록</td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>08:23</td>
-                      <td>08:25</td>
-                      <td>등록</td>
-                    </tr>                    
-              </tbody>
-          </table>
-        </div>
+
+        <div className='date-danger-list'>
+          <div className='date-text'>
+            <div className='year'>2024 </div>
+            <div className='date'>02.28</div>
+            <span className='day'>목요일</span>
+          </div>
+          <div className='data-table-list'>
+            <div className='list-header'>
+              <div className='row'>
+                <div className='cell' style={{width:'18%'}}>번호</div>
+                <div className='cell' style={{width:'25%'}}>발생시각</div>
+                <div className='cell' style={{width:'30%'}}>해결시각</div>
+                <div className='cell auto'>리포트</div>
+              </div>
+            </div>
+            <div className='list-body'>
+              <div className='row'>
+                  <div className='cell' style={{width:'18%'}}>01</div>
+                  <div className='cell' style={{width:'25%'}}>08:23</div>
+                  <div className='cell' style={{width:'30%'}}>02.20 08:25</div>
+                  <div className='cell auto'>등록</div>
+              </div>
+              <div className='row'>
+                  <div className='cell' style={{width:'18%'}}>01</div>
+                  <div className='cell' style={{width:'25%'}}>08:23</div>
+                  <div className='cell' style={{width:'30%'}}><span className='c-red'>미결</span></div>
+                  <div className='cell auto'>등록</div>
+              </div>
+              <div className='row'>
+                <div className='cell' style={{width:'18%'}}>01</div>
+                <div className='cell' style={{width:'25%'}}>08:23</div>
+                <div className='cell' style={{width:'30%'}}>02.20 08:25</div>
+                <div className='cell auto'>등록</div>
+            </div>
+            </div>
+          </div>
+        </div>      
       </div>
 			</Contents>
 		</>

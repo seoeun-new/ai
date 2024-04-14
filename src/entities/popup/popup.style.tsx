@@ -3,7 +3,7 @@ import { COLOR, BannerProfile, Thumb } from '@/shared'
 
 export const Popup = styled.div`
 	${BannerProfile}
-
+ 
 	position:fixed;top:0;width:100%;height:100%;min-width:280px;z-index:80;z-index:105;max-width: 475px;
 	.dim{position:absolute;top:0;left:0;width:100%;height:100%;background:#2a2a2a;opacity: 0.7;}
 
@@ -32,8 +32,9 @@ export const Popup = styled.div`
 				.title{width:100%; font-size:2.2rem;font-weight:600;text-align:center;display:block;
 					&.align-l{text-align:left;}
 				}
-				.btn-add{ color:${COLOR.primary};font-weight:1.6rem;font-weight:500;display:flex;align-items:center;margin-left:auto;}
-				.btn-add:before{content:'';display:block;width:1.6rem;height:1.6rem;margin-right:0.8rem; background:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 2V14' stroke='%234252E2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 8L2 8' stroke='%234252E2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 0 0;background-size:auto 100%;}				
+				.btn-add{ color:${COLOR.primary};font-weight:1.6rem;font-weight:500;display:flex;align-items:center;margin-left:auto;white-space:nowrap;
+					&:before{content:'';display:block;width:1.6rem;height:1.6rem;margin-right:0.8rem; background:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 2V14' stroke='%234252E2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 8L2 8' stroke='%234252E2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 0 0;background-size:auto 100%;}				
+				}
 			}
 			.pop-body{padding:0 1.6rem 1.6rem;
 				max-height:60vh;overflow-y:auto;

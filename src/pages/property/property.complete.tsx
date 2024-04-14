@@ -22,8 +22,8 @@ const _ = () => {
 			<Contents>
         <div className='property-complete-wrap'>
           <div className='visual'>
-            <div className='txt'>서비스 준비가 완료되었습니다.</div>
             <div className='visual-complete'></div>
+            <div className='txt'>서비스 준비가 완료되었습니다.</div>            
             <div className='txt-sub'>
               우리 아이를 위해 학부모님, 선생님
               <br />그리고 <em>우리아이AI</em>가 함께합니다.

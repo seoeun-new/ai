@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DateText, SelectBox, ViewDetail, FormWrap, BannerProfile, Thumb } from '@/shared'
+import { DateText, SelectBox, ViewDetail, FormWrap, BannerProfile, Thumb, AlbumList } from '@/shared'
 
 export const Contents = styled.div`
 
@@ -8,6 +8,7 @@ ${SelectBox}
 ${ViewDetail}
 ${FormWrap}
 ${BannerProfile}
+${AlbumList}
 
 
 background:#F5F6FA;
@@ -23,16 +24,17 @@ background:#F5F6FA;
 
       .teacher-name {
         margin-left: auto;
+        b{font-weight:500;}
         span { font-size: 1.4rem; }
       }
     }
 
     ul li {
-      padding: 1.2rem 0; border-top: 0.1rem solid #ECEEF5; display: flex; align-items: center;
+      padding: 1.2rem 1.6rem; border-top: 0.1rem solid #ECEEF5; display: flex; align-items: center;
       .link {
         display: flex; align-items: center;
 
-        .thumb { width: 5.6rem; height: 5.6rem; margin-right: 1.6rem;${Thumb} }
+        .thumb { width: 5.6rem; height: 5.6rem; margin-right: 1.6rem;${Thumb} border-radius:1rem;}
 
         .text { font-size: 1.6rem; font-weight: 500; }
       }
@@ -54,17 +56,6 @@ background:#F5F6FA;
   padding: 2.4rem 0;
   .text { margin-top: 2.4rem; color: #505050; font-size: 1.6rem; }
 }
-
-.album-list {
-  display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 0.8rem;
-
-  li .img {
-    width: 100%; position: relative;
-    &:after { display: block; content: ""; padding-bottom: 100%; }
-    img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0.8rem; }
-  }
-}
-
 
 
 `

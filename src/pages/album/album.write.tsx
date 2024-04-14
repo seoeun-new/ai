@@ -13,8 +13,7 @@ const _ = () => {
 		setHeader({
 			type: 'sub',
 			title:'앨범 작성',
-			back: true,
-      trash:true
+			back: true
 		})
 	}, [])
 
@@ -39,12 +38,12 @@ const _ = () => {
   
 	//아동 팝업
 	const childList = [
-		{clsName:'풀잎반', name:'홍길동', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'새싹반', name:'하유리', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'장미반', name:'이지은', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'풀잎반', name:'홍길동', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'새싹반', name:'하유리', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'},
-		{clsName:'장미반', name:'이지은', src:process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'}
+		{clsName:'풀잎반', name:'홍길동', src:'/images/temp/temp-album.jpg'},
+		{clsName:'새싹반', name:'하유리', src:'/images/temp/temp-album.jpg'},
+		{clsName:'장미반', name:'이지은', src:'/images/temp/temp-album.jpg'},
+		{clsName:'풀잎반', name:'홍길동', src:'/images/temp/temp-album.jpg'},
+		{clsName:'새싹반', name:'하유리', src:'/images/temp/temp-album.jpg'},
+		{clsName:'장미반', name:'이지은', src:'/images/temp/temp-album.jpg'}
 	]
 	const [popChild, setPopChild] = useState(false)
   const popOpenChild = () => { setPopChild(true) }
@@ -63,14 +62,14 @@ const _ = () => {
 	return (
 		<>
 			<Contents>
-        <div className="album-write-wrap">
-          <div className="page-top-area">
-            <Button className="btn-select" onClick={popOpenClass}><span>{selecedClass.name}</span><em>({selecedClass.total})</em></Button>
+        <div className='album-write-wrap'>
+          <div className='page-top-area'>
+            <Button className='btn-select' onClick={popOpenClass}><span>{selecedClass.name}</span><em>({selecedClass.total})</em></Button>
           </div>
-          <div className="album-write">
-            <div className="form-wrap">
-              <Input type="text" value={ title } placeholder="제목 (필수)" del={ true } onChange={titleChange} />
-              <Textarea placeholder="내용" />
+          <div className='album-write'>
+            <div className='form-wrap'>
+              <Input type='text' value={ title } placeholder='제목 (필수)' del={ true } onChange={titleChange} />
+              <Textarea placeholder='내용' />
             </div>
 
             <UploadPhotoAnalyze 
@@ -82,8 +81,8 @@ const _ = () => {
               />
 
 
-            <div className="btn-wrap">
-              <Button className="btn-type2 st1">미리보기</Button>
+            <div className='btn-wrap'>
+              <Button className='btn-type2 st1'>미리보기</Button>
             </div>
           </div>
         </div>

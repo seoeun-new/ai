@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { CalendarSection } from './calendar.style'
 
 const _ = ({ children, className, date, setActiveStartDate, activeStartDateHandler, selectDayHandler }: any) => {

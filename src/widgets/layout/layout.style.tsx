@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { MX } from '@/shared'
+import { MX, FloatingMenu } from '@/shared'
 
 export const Outerwrap = styled.div`
 width: 915px;display:flex;justify-content: space-between;margin:0 auto;
@@ -31,6 +31,7 @@ width: 915px;display:flex;justify-content: space-between;margin:0 auto;
 `
 
 export const Wrap = styled.div`
+  ${FloatingMenu}
 	position:relative;max-width: 475px;width:475px;min-height: 100vh;
   ${MX.media(
     ``,

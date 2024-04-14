@@ -32,7 +32,7 @@ export const UploadPhotoAnalyze = styled.div`
 							~ img { margin-left: -0.5rem; }
 						}
 					}
-					.num { margin-left: 0.4rem; color: :${COLOR.primary}; display: flex; align-items: center;
+					.num { margin-left: 0.4rem; color:${COLOR.primary}; display: flex; align-items: center;
 						.ico-plus { width: 1.8rem; height: 1.8rem; background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 4.5V13.5' stroke='%234252E2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.5 9H13.5' stroke='%234252E2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 0 0; background-size: auto 100%; }
 					}
 					.btn-child-view { margin-left: auto; width: 3.2rem; height: 3.2rem; border-radius: 100%; background: #fff url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5.00065' cy='9.99935' r='1.66667' transform='rotate(-90 5.00065 9.99935)' fill='%23878AA1'/%3E%3Ccircle cx='10.0007' cy='9.99935' r='1.66667' transform='rotate(-90 10.0007 9.99935)' fill='%23878AA1'/%3E%3Ccircle cx='15.0007' cy='9.99935' r='1.66667' transform='rotate(-90 15.0007 9.99935)' fill='%23878AA1'/%3E%3C/svg%3E%0A") no-repeat 50% 50%; background-size: 2rem 2rem; }

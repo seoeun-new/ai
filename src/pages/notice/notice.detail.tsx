@@ -13,8 +13,10 @@ const _ = () => {
 		setHeader({
 			type: 'sub',
 			title:'공지사항',
-			back: true
+			back: true,
+      dotmenu:true
 		})
+    popOpenMenu();
 	}, [])
 
   const [trigger, setTrigger] = useState(false);
@@ -75,7 +77,6 @@ const _ = () => {
       <div className="notice-detail-wrap">
         <div className="view-detail">
             <div className="view-desc">
-            <Button className="btn-dot-menu" onClick={popOpenMenu}></Button>
               <b className="tit">풀잎반 학부모님들께 안내드립니다.</b>
               <div className="info">
                 <div className="left">
@@ -83,7 +84,7 @@ const _ = () => {
                   <span className="date">수정날짜 : 2024.03.06  07:10:01</span>
                 </div>
                 <div className="right">
-                  <span className="writer">이유리</span>
+                  <span className="writer">이유리 선생님</span>
                 </div>
               </div>
             </div>

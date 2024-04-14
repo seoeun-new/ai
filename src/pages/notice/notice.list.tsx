@@ -24,7 +24,7 @@ const _ = () => {
   ]
   const notiData2 = [
     {number:'5656', cate:'전체', reserve:true, tit:'을지로 푸르니 하나 금융어린집 입학을 환영합', date:'2024.03.06', time:'07:10:01', from:'을지로푸르니하나금융어린이집'},
-    {number:'8523', cate:'전체', reserve:false, tit:'3월 식단표, 영양소식지 입니다.3월 식단표, 영양소식지 입니다.', date:'2024.03.06', time:'07:10:01', from:'을지로푸르니하나금융어린이집'}
+    {number:'8523', cate:'전체', reserve:false, tit:'3월 식단표, 영양소식지 입니다.3월 식단표, 영양소식지 입니다.', date:'2024.03.06', time:'07:10:01', from:'[새싹반] 이유리 선생님'}
   ]
 
 
@@ -68,11 +68,12 @@ const _ = () => {
 							{notiData2.map((d) => <Noti key={d.number} item={d} />)}
 						</ul>
 						<Button className='btn-more'>더보기</Button>
-						<div className='btn-wrap'>
-							<Button className='btn-type2 st1' onClick={popOpenIng}>공지 작성</Button>
-						</div>
 				</div>
 			</Contents>
+
+			<div className='floating-menu'>
+				<button className='btn-plus' onClick={popOpenIng}></button>
+			</div>
 
 			<PopBoard
         type='ing'

@@ -2,7 +2,7 @@ import { formatBytes } from '@/shared/utils/ui'
 import { UploadPhotos } from './uploadphotos.style'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const _ = ({ photos, max, total, onChange }: any) => {
+const _ = ({ title, photos, max, total, onChange }: any) => {
 	let imageUrlLists = [...photos];
 
   const handleAddImages = (event:any) => {
@@ -30,23 +30,24 @@ const _ = ({ photos, max, total, onChange }: any) => {
     onChange(photos.filter((_:any, index:any) => index !== id));
   };
 	return (
-		<UploadPhotos>
-      <div className="img-wrap">
-        <label className="upload" htmlFor="photos" onChange={handleAddImages}>
-        <input type="file" multiple />
+		<UploadPhotos className='photo-upload-list'>
+      {title ?  <b className='tit'>사진첨부</b> : null}
+      <div className='img-wrap'>
+        <label className='upload' htmlFor='photos' onChange={handleAddImages}>
+        <input type='file' multiple />
         </label>
-        <div className="img"><span><em>{imageUrlLists.length}</em>/{total}</span></div>
+        <div className='img'><span><em>{imageUrlLists.length}</em>/{total}</span></div>
       </div>
 
-      <div className="photo-list">
+      <div className='photo-list'>
           <Swiper
             spaceBetween={0}
             slidesPerView={'auto'}
           >
           {photos.map((image:any, id:any) => (
             <SwiperSlide key={id}>
-              <button type="button" className="btn-del" onClick={() => handleDeleteImage(id)}></button>
-              <div className="img"><img src={image} alt={`${image}-${id}`} /></div>            
+              <button type='button' className='btn-del' onClick={() => handleDeleteImage(id)}></button>
+              <div className='img'><img src={image} alt={`${image}-${id}`} /></div>            
             </SwiperSlide>
           ))}      
           </Swiper>

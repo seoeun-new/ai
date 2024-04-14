@@ -45,8 +45,8 @@ const _ = () => {
             <Input type='text' value={ name } placeholder='실명 입력' del={ true } onChange={(e:any) => {setName(e.target.value)}} />
             <div className='iput-txt'>성함이 외국어로 등록되어 있으신 분은 <em>영문으로 입력해주세요.</em></div>
           </div>
-          <div className='btn-wrap btn-step-wrap'>
-            <div className='right'><Button className='btn-next'>다음</Button></div>
+          <div className='btn-wrap'>
+            <Button className='btn-type1 st1'>다음</Button>
           </div>
         </div>
 			</Contents>

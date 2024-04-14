@@ -1,4 +1,4 @@
-import { Button } from '@/entities'
+import { Button, Icon, CalendarSection, Calendar } from '@/entities'
 import { globalStore } from '@/shared'
 import { useEffect, useState } from 'react'
 import { MenuBar } from '@/widgets'
@@ -19,6 +19,25 @@ const _ = () => {
 	}, [])
 
   
+	//달력
+	const [selectDay, setSelectDay] = useState(new Date()); 
+	const [date, setDate] = useState(new Date());
+	const [activeStartDate, setActiveStartDate] = useState(undefined);
+	const [mark, setMark] = useState([]);
+	const [attend, setAttend] = useState([]);
+
+	const selectDayHandler = (d:any) =>{ setSelectDay(d); }
+	const activeStartDateHandler = (date:any) =>{ 
+		const dateToSet = new Date(date);
+		dateToSet.setMonth(dateToSet.getMonth());
+		const beginOfMonth: any = new Date(dateToSet.getFullYear(), dateToSet.getMonth(), 1)
+
+		setActiveStartDate(beginOfMonth);
+		setDate(dateToSet)
+	}
+	const markHandler = (data:any) =>{ setMark(data) }
+
+
 	//반선택 팝업
 	const classList = [
 		{name:'전체', total:20, taacher:''},
@@ -33,61 +52,85 @@ const _ = () => {
   const popCloseClass = () => { setPopClass(false) }
 
 
-
 	//게시물 img 팝업
 	const [popIng, setPopIng] = useState(false)
-  // const popOpenIng = () => { setPopIng(true) }
-  const popCloseIng = () => { setPopIng(false) }
+  const popOpenIng = () => { setPopIng(true) }
+  const popCloseIng = () => { setPopIng(false) }		
+
+
+	useEffect(() => {
+		markHandler(['2024-03-17', '2024-03-20', '2024-03-25', '2024-04-02', '2024-04-12', '2024-05-02', '2024-06-02', '2024-07-02', '2024-08-02'])
+	}, [])
 
 	return (
 		<>
 			<Contents>
-				<div className="album-list-wrap">
-					<div className="page-top-area">
-					<Button className="btn-select" onClick={popOpenClass}><span>{selecedClass.name}</span><em>({selecedClass.total})</em></Button>
+				<div className='album-list-wrap'>
+					<div className='page-top-area'>
+					<Button className='btn-select' onClick={popOpenClass}><span>{selecedClass.name}</span><em>({selecedClass.total})</em></Button>
+					<CalendarSection className='calendar-wrap' date={date} 
+							setActiveStartDate={setActiveStartDate} 
+							activeStartDateHandler={activeStartDateHandler}
+							selectDayHandler={selectDayHandler}
+						>
+							<Calendar value={date} selected={selectDay} mark={mark} attend={attend}
+								onChange={(v:any)=>{
+									activeStartDateHandler(v);
+									selectDayHandler(v);
+								}}
+								activeStartDate={activeStartDate}
+								onActiveStartDateChange={setActiveStartDate}
+							>
+								<div className='mark'>
+									<div className='dot album'></div>
+								</div> 
+							</Calendar>
+
+						</CalendarSection>					
 					</div>
-					<div className="days-album-wrap">
-						<div className="date-text">
-							<div className="year">2024 </div>
-							<div className="date">02.28</div>
-							<span className="day">목요일</span>
+					<div className='days-album-wrap'>
+
+						<div className='date-text'>
+							<div className='year'>2024 </div>
+							<div className='date'>02.28</div>
+							<span className='day'>목요일</span>
 						</div>
-						<div className="photo-list-box">
-							<div className="info">
-								<div className="class-name">풀잎반</div>
-								<div className="teacher-name">이미현<span>선생님</span></div>
+						<div className='photo-list-box'>
+							<div className='info'>
+								<div className='class-name'>풀잎반</div>
+								<div className='teacher-name'><b>이미현</b><span>선생님</span></div>
 							</div>
 							<ul>
 								<li>
-									<Button className="link">
-										<div className="thumb"><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt="" /></div>
-										<div className="text">풀잎반 아이들 이번주 활동사진 입니다^^</div>
+									<Button className='link'>
+										<div className='thumb'><img src={process.env.PUBLIC_URL +'/images/temp/temp-album.jpg'} alt='' /></div>
+										<div className='text'>풀잎반 아이들 이번주 활동사진 입니다^^</div>
 									</Button>
 								</li>
 								<li>
-									<Button className="link">
-										<div className="thumb"><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt="" /></div>
-										<div className="text">풀잎반 아이들 이번주 활동사진 입니다^^</div>
+									<Button className='link'>
+										<div className='thumb'><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt='' /></div>
+										<div className='text'>풀잎반 아이들 이번주 활동사진 입니다^^</div>
 									</Button>
 								</li>
 							</ul>
 						</div>
-						<div className="photo-list-box">
-							<div className="info">
-								<div className="class-name">풀잎반</div>
-								<div className="teacher-name">이미현<span>선생님</span></div>
+						<div className='photo-list-box'>
+							<div className='info'>
+								<div className='class-name'>풀잎반</div>
+								<div className='teacher-name'><b>이미현</b><span>선생님</span></div>
 							</div>
 							<ul>
 								<li>
-									<Button className="link">
-										<div className="thumb"><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt="" /></div>
-										<div className="text">풀잎반 아이들 이번주 활동사진 입니다^^</div>
+									<Button className='link'>
+										<div className='thumb'><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt='' /></div>
+										<div className='text'>풀잎반 아이들 이번주 활동사진 입니다^^</div>
 									</Button>
 								</li>
 								<li>
-									<Button className="link">
-										<div className="thumb"><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt="" /></div>
-										<div className="text">풀잎반 아이들 이번주 활동사진 입니다^^</div>
+									<Button className='link'>
+										<div className='thumb'><img src={process.env.PUBLIC_URL +'/images/temp/temp-notice.jpg'} alt='' /></div>
+										<div className='text'>풀잎반 아이들 이번주 활동사진 입니다^^</div>
 									</Button>
 								</li>
 							</ul>
@@ -95,6 +138,10 @@ const _ = () => {
 					</div>
 				</div>
 			</Contents>
+			
+			<div className='floating-menu'>
+				<button className='btn-plus' onClick={popOpenIng}></button>
+			</div>
 
 			<PopSelectClass
 				value={selecedClass}
@@ -111,7 +158,7 @@ const _ = () => {
 				close={popCloseIng}
 			/>
 
-    <MenuBar menu="album" />	
+    <MenuBar menu='album' />	
 		</>
 	)
 }

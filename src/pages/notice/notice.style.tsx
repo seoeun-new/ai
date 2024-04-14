@@ -57,9 +57,14 @@ export const Contents = styled.div`
 			.btn { padding: 0 1rem; height: 3.2rem; display: inline-flex; align-items: center; font-size: 1.4rem; font-weight: 500; color: ${COLOR.primary}; }
 		}
 
+		.menu {margin-top:2.4rem;display:flex;margin-bottom:1.5rem;
+			.inp-check .t{margin-left:0.5rem;}
+			.right{margin-left:auto;}
+		}
+
 		.form-wrap {margin-top: 0.5rem;
 			.input,
-			.textarea {background: #fff; }
+			.textarea {background: #fff; border:0.1rem solid #D4D6E3;}
 			> * ~ *{margin-top:1.6rem;}
 		}
 

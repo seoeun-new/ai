@@ -7,7 +7,7 @@ export const RepleList = styled.span`
 	display: block;
 
 	b { font-weight: 700; }
-	em { color: ${COLOR.primary}; }
+	em { color: ${COLOR.primary}; margin-left:0.5rem;}
 }
 
 .reple-list li { margin-top: 1.2rem;

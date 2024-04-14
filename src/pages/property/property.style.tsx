@@ -64,6 +64,7 @@ export const Contents = styled.div`
 	}
 	
 	.profile-regist-wrap {
+		padding-top: 1.6rem;
 		.btn-wrap { margin-top: 1.7rem; }
 		.thumbnail { margin-top: 2.4rem; }
 	}
@@ -128,9 +129,9 @@ export const Contents = styled.div`
 	.property-complete-wrap {
 		padding: 3.3rem 1.6rem 2.4rem; background: #fff; height: 100%; width: calc(100% + 3.2rem); margin-left: -1.6rem;
 		.visual {
-			.txt { font-size: 2rem; text-align: center; }
+			.txt { font-size: 2rem; text-align: center;margin-top:2.4rem;font-weight:600;}
 			.visual-complete { width: 18.6rem; height: 11.7rem; margin-top: 2.6rem; display: block; margin: 0 auto; background: ${MX.src('/images/visual-property-complete.svg')} no-repeat 0 0; background-size: auto 100%; }
-			.txt-sub { margin-top: 2.2rem; color: #767676; text-align: center;
+			.txt-sub { margin-top: 2rem; color: #767676; text-align: center;
 				em { color: #505050; }
 			}
 		}

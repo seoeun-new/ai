@@ -18,7 +18,7 @@ export const Checkbox = styled.label`
 		}
 	}
 	.ic { position: relative; display: inline-block; overflow: hidden; width: 2.4rem; height: 2.4rem; border: 0.1rem solid #d9d9d9; background-color: #fff; transition: all 0.5s ease; background-position: 55% 50%; background-repeat: no-repeat; background-size: auto 0.6rem; border-radius: 100%; }
-	.t { display: inline-block; padding-left: 0.4rem; vertical-align: middle; font-size: 1.4rem; color: #383838; letter-spacing: -0.03em; }
+	.t { display: inline-block; padding-left: 0.8rem; vertical-align: middle; font-size: 1.4rem; color: #383838; letter-spacing: -0.03em; }
 }
 &.inp-range{
 	position: relative; display: inline-block; position: relative; overflow: hidden; width: 4.4rem;

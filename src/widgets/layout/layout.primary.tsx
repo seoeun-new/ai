@@ -30,7 +30,8 @@ const _ = () => {
 						back={ global.header.back } 
 						close={ global.header.close } 
 						menu={ global.header.menu } 
-						trash={ global.header.trash } /> 
+						trash={ global.header.trash }
+						dotmenu={ global.header.dotmenu } /> 
 					: null } 
 				<Outlet />
 				{global.header.menu ? <GnbMenu /> : null}

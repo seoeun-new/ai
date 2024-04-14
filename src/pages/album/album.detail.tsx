@@ -13,8 +13,10 @@ const _ = () => {
 		setHeader({
 			type: 'sub',
 			title:'앨범 보기',
-			back: true
+			back: true,
+      dotmenu:true
 		})
+    popOpenMenu();
 	}, [])
 
 
@@ -49,7 +51,7 @@ const _ = () => {
 		{name:'수정', fnc:()=>{alert('수정')}},
 		{name:'삭제', fnc:()=>{alert('삭제')}},
 	]
-  const [popMenu, setPopMenu] = useState(false)
+  const [popMenu, setPopMenu] = useState(true)
   const popOpenMenu = () => { setPopMenu(true) }
   const popCloseMenu = () => { setPopMenu(false) }
 
@@ -74,7 +76,7 @@ const _ = () => {
 		setReple(e.target.value);
 	};
 	  
-  const thumb = process.env.PUBLIC_URL +process.env.PUBLIC_URL +'/images/temp/temp-profile.png';
+  const thumb = process.env.PUBLIC_URL +'/images/temp/temp-profile.png';
 
   
 	return (
@@ -91,7 +93,6 @@ const _ = () => {
                 </div>
               </div>
               <div className='view-desc'>
-                <Button className='btn-dot-menu' onClick={popOpenMenu}></Button>
                 <b className='tit'>풀잎반 아이들 이번주 활동사진 입니다^^ <br />즐거운 한 주를 보냈습니다~</b>
                 <div className='info'>
                   <div className='left'>

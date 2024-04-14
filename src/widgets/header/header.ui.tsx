@@ -3,8 +3,10 @@ import { Button, Icon } from '@/entities'
 
 const _ = () => {
 	const gnbOpen = (): void => {
-		document.body.scrollTop = 0
-		document.body.classList.add('open-gnb')
+		document.documentElement.scrollTop = 0;
+		setTimeout(function(){
+			document.body.classList.add('open-gnb');
+		}, 300);
 		;(document.querySelector('.outer-wrap') as any).classList.add('open-gnb')
 		;(document.querySelector('.gnb-wrap') as any).style.display = 'block'
 		;(document.querySelector('.gnb-wrap .gnb-content') as any).scrollTop = 0

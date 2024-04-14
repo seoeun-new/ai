@@ -3,6 +3,7 @@ import { globalStore } from '@/shared'
 
 import { Button, Icon, CalendarSection, Calendar } from '@/entities'
 import PopSelectClass from '@/features/popup/selectclass/popup.selectclass'
+import PopSelectList from '@/features/popup/selectlist/popup.selectlist'
 import { MenuBar } from '@/widgets'
 
 // import moment from 'moment';
@@ -50,11 +51,24 @@ const _ = () => {
   const popOpenClass = () => { setPopClass(true) }
   const popCloseClass = () => { setPopClass(false) }
 
+	//필터 팝업
+	const filterList = [
+		{name:'전체'},
+		{name:'필수공지'},
+		{name:'일정'},
+		{name:'귀가동의'},
+		{name:'투약의뢰'}
+	]
+	const [selecedFilter, setSelectedFilter] = useState(filterList[0])
+	const [popFilter, setPopFilter] = useState(false)
+  const popOpenFilter = () => { setPopFilter(true) }
+  const popCloseFilter = () => { setPopFilter(false) }
+
 
 	useEffect(() => {
 		markHandler(['2024-03-17', '2024-03-20', '2024-03-25', '2024-04-02', '2024-05-02', '2024-06-02', '2024-07-02', '2024-08-02'])
 		attendHandler(['2024-03-31', '2024-05-17', '2024-05-20', '2024-05-25', '2024-04-02', '2024-04-03', '2024-04-15', '2024-04-17', '2024-04-20', '2024-05-02','2024-06-02','2024-07-02','2024-08-02']);
-	})
+	}, [])
 
 	return (
 		<>
@@ -183,7 +197,7 @@ const _ = () => {
 									<span className='day'>목요일</span>
 								</div>
 								<div className='right'>
-								<button className='btn-filter'>필터</button>
+								<button className='btn-filter' onClick={popOpenFilter}>필터</button>
 							</div>
 							</div>
 							<div className='schedule-list'>
@@ -239,6 +253,15 @@ const _ = () => {
 				open={popClass} 
 				close={popCloseClass}
 				onChange={setSelectedClass}
+			/>
+
+			<PopSelectList
+				title='목록 필터'
+				value={selecedFilter}
+				data={filterList}
+				open={popFilter}
+				close={popCloseFilter}
+				onChange={setSelectedFilter}
 			/>
 
 			<MenuBar menu='home' />

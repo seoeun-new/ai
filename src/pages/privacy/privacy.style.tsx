@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import { MX, COLOR, TxtGuide, LinkMenuList } from '@/shared'
+import { MX, COLOR, TxtGuide, LinkMenuList, FormWrap } from '@/shared'
 
 export const Contents = styled.div`
-	${TxtGuide};    
-  ${LinkMenuList};    
+	${TxtGuide} 
+  ${LinkMenuList}
+  ${FormWrap}
   
   background:#F5F6FA;
   .basic-info-wrap { height: 100%; background: #F5F6FA;

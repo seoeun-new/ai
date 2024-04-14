@@ -9,7 +9,8 @@ const _ = () => {
 		setHeader({
 			type: 'sub',
 			title:'AI 위험 알림 목록',
-			back: true
+			back: true, 
+      dotmenu:true
 		})
 	}, [])
 
@@ -32,38 +33,36 @@ const _ = () => {
           <ul>
             <li>
               이벤트명
-              <div className='right'>아동이탈</div>
+              <div className='right'><b className='medium c-red'>아동이탈</b></div>
             </li>
             <li>
               발생시각
-              <div className='right'>08:23</div>
-            </li>
-            <li>
-              현재상태
-              <div className='right'><span className='c-red'>미결</span></div>
+              <div className='right'><span className='c-red'>2023.08.17 08:23:12</span></div>
             </li>
           </ul>
         </div>
 
         <div className='teacher-list'>
-          <div className='tit'><Icon type='teacher' /><span>업무 일정이 없는 선생님</span></div>
-          <ul>
-            <li>
-              풀잎반
-              <span className='name'>이미현<em>선생님</em></span>
-            </li>
-            <li>
-              새싹반
-              <span className='name'>송미선<em>선생님</em></span>
-            </li>
-            <li>
-              장미반
-              <span className='name'>이화영<em>선생님</em></span>
-            </li>
-          </ul>
+          <div className='tit'><span>업무 일정이 없는 선생님</span></div>
+          <div className='list-box'>
+            <ul>
+              <li>
+                풀잎반
+                <div className='right'><span className='teacher'><b>이미현</b>선생님</span></div>
+              </li>
+              <li>
+                새싹반
+                <div className='right'><span className='teacher'><b>송미선</b>선생님</span></div>
+              </li>
+              <li>
+                장미반
+                <div className='right'><span className='teacher'><b>이화영</b>선생님</span></div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className='btn-wrap column'>
+        <div className='btn-wrap'>
           <Button className='btn-type1 st3'>112 신고</Button>
           <Button className='btn-type1 st1'>해결</Button>
         </div>

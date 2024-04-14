@@ -25,7 +25,7 @@ const _ = () => {
 				<div className='certify-wrap'>
 					<div className='join-form'>
 						<div className='txt-guide'>
-							사용하고자 하는 아이디를
+							사용하고자 하는 <b>아이디</b>를
 							<br />
 							입력해주세요.
 						</div>

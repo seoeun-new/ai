@@ -30,14 +30,14 @@ export const Contents = styled.div`
 	}
 
 	.rule-wrap{padding-top:2.4rem;
-		h1{font-size:1.8rem; color:#111;font-weight:700;}
-		h2{margin-top:1.6rem;font-size:1.6rem; color:#111;font-weight:700;}
+		h1{font-size:1.8rem; color:#111;font-weight:500;}
+		h2{margin-top:1.6rem;font-size:1.6rem; color:#111;font-weight:500;}
 		.text{margin-top:1.6rem;font-size:1.4rem; color:#767676;}
 	}
 
 	.join-complete-wrap{padding-top:4.8rem;text-align:center;
 		.visual{height:15.4rem;background:${MX.src('/images/bg-visual-join-complete.jpg')} no-repeat 50% 0;background-size:auto 100%;}
-		.tit{font-weight:700; color:#111;font-size:2rem;display:block;margin-top:2rem;text-align:center;}
+		.tit{font-weight:500; color:#111;font-size:2rem;display:block;margin-top:2rem;text-align:center;}
 		.text{margin-top:1.6rem;font-size:1.4rem; color:#60637B;text-align:center;}
 		[class*=btn-type]{margin-top:3.2rem;width:100%;}
 	}

@@ -23,7 +23,7 @@ const _ = () => {
           <ul>
               <li>
                 이벤트명
-                <div className='right c-red'>아동이탈</div>
+                <div className='right'><b className='medium c-red'>아동이탈</b></div>
               </li>
               <li>
                 발생시각

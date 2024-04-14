@@ -18,7 +18,7 @@ const _ = () => {
 	return (
 		<Gnb className='gnb-wrap'>
 			<div className='gnb-header'>
-				<Button as='a' to='/' className='logo'></Button>
+				<Button to='/' className='logo'></Button>
 				<div className='right'>
 					<Button className='btn-close' onClick={gnbClose}>
 						<Icon type='close' />
@@ -28,7 +28,7 @@ const _ = () => {
 			<div className='gnb-content'>
 				<ul className='alarm-wrap'>
 					<li>
-						<Button as='a' to='/'>
+						<Button to='/' className="link">
 							<Icon type='alarm-unidentified' />
 							<span className='txt'>
 								미확인 알림<em>(30)</em>
@@ -36,7 +36,7 @@ const _ = () => {
 						</Button>
 					</li>
 					<li>
-						<Button as='a' to='/'>
+						<Button to='/' className="link">
 							<Icon type='alarm-danger' />
 							<span className='txt'>AI 위험 알림 관리</span>
 						</Button>
@@ -44,44 +44,44 @@ const _ = () => {
 				</ul>
 				<ul className='menu-list'>
 					<li>
-						<Button as='a' to='/'>
-							{' '}
+						<Button to='/' className="link">
 							<Icon type='menu-home' />
 							<span className='txt'>원 정보</span>
 						</Button>
 					</li>
 					<li>
-						<Button as='a' to='/'>
-							{' '}
+						<Button to='/' className="link">
 							<Icon type='menu-teacher' />
 							<span className='txt'>선생님 정보</span>
 						</Button>
 					</li>
 					<li>
-						<Button as='a' to='/'>
-							{' '}
+						<Button to='/' className="link">
 							<Icon type='menu-class' />
 							<span className='txt'>반 정보</span>
 						</Button>
 					</li>
 					<li>
-						<Button as='a' to='/'>
-							{' '}
+						<Button to='/' className="link">
 							<Icon type='menu-child' />
 							<span className='txt'>원아 정보</span>
 						</Button>
 					</li>
 					<li>
-						<Button as='a' to='/'>
-							{' '}
+						<Button to='/' className="link">
 							<Icon type='menu-attend' />
 							<span className='txt'>전자출결 정보</span>
 						</Button>
 					</li>
-					<li className='line-t'>
-						<Button as='a' to='/'>
-							{' '}
+					<li>
+						<Button to='/' className="link">
 							<Icon type='menu-privacy' />
+							<span className='txt'>개인정보 관리</span>
+						</Button>
+					</li>
+					<li className='line-t bg'>
+						<Button to='/' className="link">
+							<Icon type='menu-cloud' />
 							<span className='txt'>개인정보 관리</span>
 						</Button>
 					</li>

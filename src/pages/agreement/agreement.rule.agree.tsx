@@ -49,7 +49,6 @@ const _ = () => {
 			<Contents>
 				<div className='agree-checks-wrap'>
 					<div className='visual'></div>
-					<div className='txt-welcome'>환영합니다!</div>
 					<div className='agree-checks'>
 						<div className='check-all'>
 							<Checkbox name='check-all' onChange={handleAllCheck} checked={checkItems.length === allCheckdata.length}>

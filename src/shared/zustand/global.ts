@@ -7,7 +7,8 @@ export const globalStore = create((set: any) => ({
 		back: false,
 		menu: false,
 		close: false,
-		trash: false
+		trash: false,
+		dotmenu: false
 	},
 	footer: {
 		fixed: false,

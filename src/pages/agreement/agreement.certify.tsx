@@ -41,8 +41,8 @@ const _ = () => {
 			</Contents>
 			<Footer>
 				<div className='btn-wrap'>
-					{!phoneSend ? <Button className='btn-type1 st1' disabled={phone.length > 0 ? false : true} onClick={onPhoneSend}><span>번호인증</span></Button> 
-					: <Button className='btn-type1 st1'><span>확인</span></Button> 
+					{!phoneSend ? <Button className='btn-type1 st1' disabled={phone.length > 0 ? false : true} onClick={onPhoneSend}><span>인증번호발송</span></Button> 
+					: <Button className='btn-type1 st1'><span>번호인증</span></Button> 
 					}
 				</div>
 			</Footer>
